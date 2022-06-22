@@ -45,7 +45,13 @@ const App = () => {
     setLocation({ ...location, [type]: parsedValue });
   };
   return (
-    <div className="mt-5 space-y-4">
+    <div className="mt-5 space-y-6">
+      <header>
+        <div className="px-4 py-2 m-auto w-fit text-4xl shadow-xl bg-slate-200 font-bold uppercase">
+          Food truck finder
+          <div className="text-xs text-center">Find food corners near you</div>
+        </div>
+      </header>
       <Search location={location} onChange={handleLocationUpdate} />
       <FoodTrucks trucks={foodTrucks.current} />
     </div>
